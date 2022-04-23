@@ -29,6 +29,7 @@ class MovieList extends Component {
     }
 
     render() {
+
         const MovieListCarousel = ({movieList}) => {
             if (!movieList) {
                 return <div>Loading....</div>
@@ -40,7 +41,7 @@ class MovieList extends Component {
                         <Carousel.Item key={movie._id}>
                             <div>
                                 <LinkContainer to={'/movie/'+movie._id} onClick={()=>this.handleClick(movie)}>
-                                    <Nav.Link><Image className="image" src={movie.imageUrl} thumbnail /></Nav.Link>
+                                    <Nav.Link><Image className="image" src={movie.imageURL} thumbnail /></Nav.Link>
                                 </LinkContainer>
                             </div>
                             <Carousel.Caption>
@@ -67,4 +68,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(MovieList);
-

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { submitLogin } from '../actions/authActions';
 import { connect } from 'react-redux';
-import { Form, Button } from 'react-bootstrap';
+import {Form, Button, Nav} from 'react-bootstrap';
 
 class Login extends Component {
 
@@ -37,7 +37,7 @@ class Login extends Component {
             <Form className='form-horizontal'>
                 <Form.Group controlId="username">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control onChange={this.updateDetails} value={this.state.details.username} type="email" placeholder="Enter email" />
+                    <Form.Control onChange={this.updateDetails} value={this.state.details.username} type="username" placeholder="Enter username" />
                 </Form.Group>
 
                 <Form.Group controlId="password">
